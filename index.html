@@ -11,6 +11,12 @@
     <span class="m"></span>
     <span class="date"></span>
    </div>
-   
+   <script>
+    function myTime(){
+        var myDate = new Date();
+        var hr,min = (myDate.getMinutes() < 10) ? "0" + myDate.getMinutes() : myDate.getMinutes();
+        sec = (myDate.getSeconds() < 10) ? "0" + myDate.getSeconds() : myDate.getSeconds()  
+      }
+   </script>
 </body>
 </html>
