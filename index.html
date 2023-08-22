@@ -8,7 +8,7 @@
 <body>
    <div class="mywatch">
     <span class="h"></span>
-    <span class="m"></span>
+    <span class="m"></span><br>
     <span class="date"></span>
    </div>
    <script>
@@ -31,11 +31,24 @@
         var currentTime = hr + ":" + min + ":" + sec + ":";
 
         document.getElementsByClassName("h")[0].innerHTML = currentTime;
-        document.getElementsByClassName("m")[0].innerHTML = m;
+        document.getElementsByClassName("m")[0].innerHTML = M;
 
-        
+        var myDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+         myMonth = ["January", "February"," March", "April", "May", "June", "July", "August", "September"," October", "November", "December"],
+
+        day = myDate.getDate();
+
+        var currentDate = myDay[myDate.getDay()] + "," + myMonth[myDate.getMonth()] + day;
+
+        document.getElementsByClassName("date")[0].innerHTML = currentDate;
+
       }
 
+      myTime();
+      setInterval(function(){
+        myTime();
+      },1000
+      );
 
    </script>
 </body>
